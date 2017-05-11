@@ -35,14 +35,14 @@ shell_update(){
         fi
     fi
 }
-shell_download_link="https://raw.githubusercontent.com/onekeyshell/kcptun_for_ss_ssr/master/kcptun_for_ss_ssr-install.sh"
-program_version_link="https://raw.githubusercontent.com/onekeyshell/kcptun_for_ss_ssr/master/version.sh"
+shell_download_link="https://raw.githubusercontent.com/wayrt7/kcptun_for_ss_ssr/master/kcptun_for_ss_ssr-install.sh"
+program_version_link="https://raw.githubusercontent.com/wayrt7/kcptun_for_ss_ssr/master/version.sh"
 ss_libev_config="/etc/shadowsocks-libev/config.json"
 ssr_config="/usr/local/shadowsocksR/shadowsocksR.json"
 kcptun_config="/usr/local/kcptun/config.json"
 # Check if user is root
 
-contact_us="https://github.com/onekeyshell/kcptun_for_ss_ssr/issues"
+contact_us="https://github.com/wayrt7/kcptun_for_ss_ssr/issues"
 fun_clangcn(){
     local clear_flag=""
     clear_flag=$1
@@ -352,7 +352,7 @@ get_install_version(){
         echo -e "${COLOR_RED}Failed to download version.sh${COLOR_END}"
     fi
     if [ -s ${cur_dir}/.version.sh ]; then
-        [ -x ${cur_dir}/.version.sh ] && chmod +x ${cur_dir}/.version.sh 
+        [ -x ${cur_dir}/.version.sh ] && chmod +x ${cur_dir}/.version.sh
         . ${cur_dir}/.version.sh
     fi
     if [ -z ${LIBSODIUM_VER} ] || [ -z ${MBEDTLS_VER} ] || [ -z ${SS_LIBEV_VER} ] || [ -z ${SSR_VER} ] || [ -z ${KCPTUN_VER} ]; then
@@ -361,7 +361,7 @@ get_install_version(){
     fi
 }
 get_latest_version(){
-    rm -f ${cur_dir}/.api_*.txt 
+    rm -f ${cur_dir}/.api_*.txt
     if [[ "${ss_libev_installed_flag}" == "false" && "${clang_action}" =~ ^[Ii]|[Ii][Nn]|[Ii][Nn][Ss][Tt][Aa][Ll][Ll]|-[Ii]|--[Ii]$ ]] || [[ "${ss_libev_installed_flag}" == "true" && "${clang_action}" =~ ^[Uu]|[Uu][Pp][Dd][Aa][Tt][Ee]|-[Uu]|--[Uu]|[Uu][Pp]|-[Uu][Pp]|--[Uu][Pp]$ ]]; then
         echo -e "Loading SS-libev version, please wait..."
         if check_sys packageManager yum; then

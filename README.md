@@ -32,9 +32,9 @@ A tool to auto-compile & install KCPTUN for SS/SSR on Linux
 |2|debian         | 8     
 |3|centos         | 6     
 |4|centos         | 7     
-|5|ubuntu         | 16.04 
-|6|ubuntu         | 14.04 
-|7|ubuntu         | 12.04 
+|5|ubuntu         | 16.04
+|6|ubuntu         | 14.04
+|7|ubuntu         | 12.04
 
 ******
 ##<a name="plan"/>安装前的准备工作
@@ -49,7 +49,7 @@ A tool to auto-compile & install KCPTUN for SS/SSR on Linux
 ------
 ###<a name="Install_command">安装命令
 ```Bash
-    wget --no-check-certificate -O ./kcptun_for_ss_ssr-install.sh https://raw.githubusercontent.com/onekeyshell/kcptun_for_ss_ssr/master/kcptun_for_ss_ssr-install.sh
+    wget --no-check-certificate -O ./kcptun_for_ss_ssr-install.sh https://raw.githubusercontent.com/wayrt7/kcptun_for_ss_ssr/master/kcptun_for_ss_ssr-install.sh
     chmod 700 ./kcptun_for_ss_ssr-install.sh
     ./kcptun_for_ss_ssr-install.sh install
 ```
